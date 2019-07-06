@@ -1,0 +1,450 @@
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.exe,
+
+ВНЕЗАПНО: Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x768FC762 в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2019-06-23 00:00:00 +0300], Instance: 0x004FE2D4 (32-bit), Flags: CMdRe0, Thread: 0x262C (Main), GetLastError(): 298 (Слишком много попыток занесения события для семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x768FC762 in C:\Windows\System32\KERNELBASE.dll: RaiseException()
+# 1 0x75CD3587 in C:\Windows\System32\msvcrt.dll: modf()
+# 2 0x75CD3352 in C:\Windows\System32\msvcrt.dll: modf()
+# 3 0x75CD5B43 in C:\Windows\System32\msvcrt.dll: modf()
+# 4 0x75CD01C0 in C:\Windows\System32\msvcrt.dll: modf()
+# 5 0x75CC5398 in C:\Windows\System32\msvcrt.dll: sqrt()
+
+# 6 0x00426A7A in C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.exe: game_ball_demo() at C:/Users/romam/Desktop/мое/прораммирование/game/game_demo_orig.cpp (112):
+
+    110: 
+    111: 
+=>  112:         double dist13 = dist (x3, x1, y3, y1);
+    113: 
+    114:         double dist14 = dist (x4, x1, y4, y1);
+
+# 7 0x004270F4 in C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.exe: time() at C:/Users/romam/Desktop/мое/прораммирование/game/game_demo_orig.cpp (238):
+
+    236:                         25,
+    237:                         rand () % 800, rand () % 800, 10 * t, 10 * t,
+=>  238:                         rand () % 800, rand () % 800, 10 * t, 10 * t);
+    239:     }
+    240: }
+
+# 8 0x00426815 in C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.exe: main() at C:/Users/romam/Desktop/мое/прораммирование/game/game_demo_orig.cpp (63):
+
+     61:     //dist ();
+     62: 
+=>   63:     time ();
+     64: 
+     65: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in void draw_ball(int, int, int, COLORREF) at C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.cpp (139):
+
+    137:     txSetColor (color);
+    138: 
+=>  139:     txCircle (x, y, r);
+    140: }
+    141: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2019-06-23 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\romam\Desktop\мое\TX\TXLib.h
+Compiled:	Jul  6 2019 01:50:08, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Jul 06 2019 01:50:12
+
+Run file:	C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.exe
+Directory:	C:\Users\romam\Desktop\мое\прораммирование\game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x768FC762 в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2019-06-23 00:00:00 +0300], Instance: 0x004FE2D4 (32-bit), Flags: CMdRe0, Thread: 0x262C (Main), GetLastError(): 298 (Слишком много попыток занесения события для семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x768FC762 in C:\Windows\System32\KERNELBASE.dll: RaiseException()
+# 1 0x75CD3587 in C:\Windows\System32\msvcrt.dll: modf()
+# 2 0x75CD3352 in C:\Windows\System32\msvcrt.dll: modf()
+# 3 0x75CD5B43 in C:\Windows\System32\msvcrt.dll: modf()
+# 4 0x75CD01C0 in C:\Windows\System32\msvcrt.dll: modf()
+# 5 0x75CC5398 in C:\Windows\System32\msvcrt.dll: sqrt()
+
+# 6 0x00426A7A in C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.exe: game_ball_demo() at C:/Users/romam/Desktop/мое/прораммирование/game/game_demo_orig.cpp (112):
+
+    110: 
+    111: 
+=>  112:         double dist13 = dist (x3, x1, y3, y1);
+    113: 
+    114:         double dist14 = dist (x4, x1, y4, y1);
+
+# 7 0x004270F4 in C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.exe: time() at C:/Users/romam/Desktop/мое/прораммирование/game/game_demo_orig.cpp (238):
+
+    236:                         25,
+    237:                         rand () % 800, rand () % 800, 10 * t, 10 * t,
+=>  238:                         rand () % 800, rand () % 800, 10 * t, 10 * t);
+    239:     }
+    240: }
+
+# 8 0x00426815 in C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.exe: main() at C:/Users/romam/Desktop/мое/прораммирование/game/game_demo_orig.cpp (63):
+
+     61:     //dist ();
+     62: 
+=>   63:     time ();
+     64: 
+     65: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in void draw_ball(int, int, int, COLORREF) at C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.cpp (139):
+
+    137:     txSetColor (color);
+    138: 
+=>  139:     txCircle (x, y, r);
+    140: }
+    141: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2019-06-23 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\romam\Desktop\мое\TX\TXLib.h
+Compiled:	Jul  6 2019 01:50:08, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Jul 06 2019 01:50:12
+
+Run file:	C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.exe
+Directory:	C:\Users\romam\Desktop\мое\прораммирование\game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.exe,
+
+ВНЕЗАПНО: Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x768FC762 в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2019-06-23 00:00:00 +0300], Instance: 0x004FE2D4 (32-bit), Flags: CMdRe0, Thread: 0x180C (Main), GetLastError(): 298 (Слишком много попыток занесения события для семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x768FC762 in C:\Windows\System32\KERNELBASE.dll: RaiseException()
+# 1 0x75CD3587 in C:\Windows\System32\msvcrt.dll: modf()
+# 2 0x75CD3352 in C:\Windows\System32\msvcrt.dll: modf()
+# 3 0x75CD5B43 in C:\Windows\System32\msvcrt.dll: modf()
+# 4 0x75CD01C0 in C:\Windows\System32\msvcrt.dll: modf()
+# 5 0x75CC5398 in C:\Windows\System32\msvcrt.dll: sqrt()
+
+# 6 0x00426A7A in C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.exe: game_ball_demo() at C:/Users/romam/Desktop/мое/прораммирование/game/game_demo_orig.cpp (112):
+
+    110: 
+    111: 
+=>  112:         double dist13 = dist (x3, x1, y3, y1);
+    113: 
+    114:         double dist14 = dist (x4, x1, y4, y1);
+
+# 7 0x004270F8 in C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.exe: time() at C:/Users/romam/Desktop/мое/прораммирование/game/game_demo_orig.cpp (238):
+
+    236:                         25,
+    237:                         rand () % 800, rand () % 800, 10 * t, 10 * t,
+=>  238:                         rand () % 800, rand () % 800, 10 * t, 10 * t);
+    239:     }
+    240: }
+
+# 8 0x00426815 in C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.exe: main() at C:/Users/romam/Desktop/мое/прораммирование/game/game_demo_orig.cpp (63):
+
+     61:     //dist ();
+     62: 
+=>   63:     time ();
+     64: 
+     65: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in void draw_ball(int, int, int, COLORREF) at C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.cpp (139):
+
+    137:     txSetColor (color);
+    138: 
+=>  139:     txCircle (x, y, r);
+    140: }
+    141: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2019-06-23 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\romam\Desktop\мое\TX\TXLib.h
+Compiled:	Jul  6 2019 01:56:57, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Jul 06 2019 01:57:02
+
+Run file:	C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.exe
+Directory:	C:\Users\romam\Desktop\мое\прораммирование\game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x768FC762 в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2019-06-23 00:00:00 +0300], Instance: 0x004FE2D4 (32-bit), Flags: CMdRe0, Thread: 0x180C (Main), GetLastError(): 298 (Слишком много попыток занесения события для семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x768FC762 in C:\Windows\System32\KERNELBASE.dll: RaiseException()
+# 1 0x75CD3587 in C:\Windows\System32\msvcrt.dll: modf()
+# 2 0x75CD3352 in C:\Windows\System32\msvcrt.dll: modf()
+# 3 0x75CD5B43 in C:\Windows\System32\msvcrt.dll: modf()
+# 4 0x75CD01C0 in C:\Windows\System32\msvcrt.dll: modf()
+# 5 0x75CC5398 in C:\Windows\System32\msvcrt.dll: sqrt()
+
+# 6 0x00426A7A in C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.exe: game_ball_demo() at C:/Users/romam/Desktop/мое/прораммирование/game/game_demo_orig.cpp (112):
+
+    110: 
+    111: 
+=>  112:         double dist13 = dist (x3, x1, y3, y1);
+    113: 
+    114:         double dist14 = dist (x4, x1, y4, y1);
+
+# 7 0x004270F8 in C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.exe: time() at C:/Users/romam/Desktop/мое/прораммирование/game/game_demo_orig.cpp (238):
+
+    236:                         25,
+    237:                         rand () % 800, rand () % 800, 10 * t, 10 * t,
+=>  238:                         rand () % 800, rand () % 800, 10 * t, 10 * t);
+    239:     }
+    240: }
+
+# 8 0x00426815 in C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.exe: main() at C:/Users/romam/Desktop/мое/прораммирование/game/game_demo_orig.cpp (63):
+
+     61:     //dist ();
+     62: 
+=>   63:     time ();
+     64: 
+     65: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in void draw_ball(int, int, int, COLORREF) at C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.cpp (139):
+
+    137:     txSetColor (color);
+    138: 
+=>  139:     txCircle (x, y, r);
+    140: }
+    141: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2019-06-23 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\romam\Desktop\мое\TX\TXLib.h
+Compiled:	Jul  6 2019 01:56:57, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Jul 06 2019 01:57:02
+
+Run file:	C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.exe
+Directory:	C:\Users\romam\Desktop\мое\прораммирование\game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.exe,
+
+ВНЕЗАПНО: Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x768FC762 в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2019-06-23 00:00:00 +0300], Instance: 0x004FE2D4 (32-bit), Flags: CMdRe0, Thread: 0x1200 (Main), GetLastError(): 298 (Слишком много попыток занесения события для семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x768FC762 in C:\Windows\System32\KERNELBASE.dll: RaiseException()
+# 1 0x75CD3587 in C:\Windows\System32\msvcrt.dll: modf()
+# 2 0x75CD3352 in C:\Windows\System32\msvcrt.dll: modf()
+# 3 0x75CD5B43 in C:\Windows\System32\msvcrt.dll: modf()
+# 4 0x75CD01C0 in C:\Windows\System32\msvcrt.dll: modf()
+# 5 0x75CC5398 in C:\Windows\System32\msvcrt.dll: sqrt()
+
+# 6 0x00426A7A in C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.exe: game_ball_demo() at C:/Users/romam/Desktop/мое/прораммирование/game/game_demo_orig.cpp (112):
+
+    110: 
+    111: 
+=>  112:         double dist13 = dist (x3, x1, y3, y1);
+    113: 
+    114:         double dist14 = dist (x4, x1, y4, y1);
+
+# 7 0x00427107 in C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.exe: time() at C:/Users/romam/Desktop/мое/прораммирование/game/game_demo_orig.cpp (240):
+
+    238:                         25,
+    239:                         rand () % 800, rand () % 800, 10 * t, 10 * t,
+=>  240:                         rand () % 800, rand () % 800, 10 * t, 10 * t);
+    241:     }
+    242: }
+
+# 8 0x00426815 in C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.exe: main() at C:/Users/romam/Desktop/мое/прораммирование/game/game_demo_orig.cpp (63):
+
+     61:     //dist ();
+     62: 
+=>   63:     time ();
+     64: 
+     65: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in void draw_ball(int, int, int, COLORREF) at C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.cpp (139):
+
+    137:     txSetColor (color);
+    138: 
+=>  139:     txCircle (x, y, r);
+    140: }
+    141: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2019-06-23 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\romam\Desktop\мое\TX\TXLib.h
+Compiled:	Jul  6 2019 02:02:42, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Jul 06 2019 02:02:47
+
+Run file:	C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.exe
+Directory:	C:\Users\romam\Desktop\мое\прораммирование\game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x768FC762 в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2019-06-23 00:00:00 +0300], Instance: 0x004FE2D4 (32-bit), Flags: CMdRe0, Thread: 0x1200 (Main), GetLastError(): 298 (Слишком много попыток занесения события для семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x768FC762 in C:\Windows\System32\KERNELBASE.dll: RaiseException()
+# 1 0x75CD3587 in C:\Windows\System32\msvcrt.dll: modf()
+# 2 0x75CD3352 in C:\Windows\System32\msvcrt.dll: modf()
+# 3 0x75CD5B43 in C:\Windows\System32\msvcrt.dll: modf()
+# 4 0x75CD01C0 in C:\Windows\System32\msvcrt.dll: modf()
+# 5 0x75CC5398 in C:\Windows\System32\msvcrt.dll: sqrt()
+
+# 6 0x00426A7A in C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.exe: game_ball_demo() at C:/Users/romam/Desktop/мое/прораммирование/game/game_demo_orig.cpp (112):
+
+    110: 
+    111: 
+=>  112:         double dist13 = dist (x3, x1, y3, y1);
+    113: 
+    114:         double dist14 = dist (x4, x1, y4, y1);
+
+# 7 0x00427107 in C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.exe: time() at C:/Users/romam/Desktop/мое/прораммирование/game/game_demo_orig.cpp (240):
+
+    238:                         25,
+    239:                         rand () % 800, rand () % 800, 10 * t, 10 * t,
+=>  240:                         rand () % 800, rand () % 800, 10 * t, 10 * t);
+    241:     }
+    242: }
+
+# 8 0x00426815 in C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.exe: main() at C:/Users/romam/Desktop/мое/прораммирование/game/game_demo_orig.cpp (63):
+
+     61:     //dist ();
+     62: 
+=>   63:     time ();
+     64: 
+     65: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in void draw_ball(int, int, int, COLORREF) at C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.cpp (139):
+
+    137:     txSetColor (color);
+    138: 
+=>  139:     txCircle (x, y, r);
+    140: }
+    141: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2019-06-23 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\romam\Desktop\мое\TX\TXLib.h
+Compiled:	Jul  6 2019 02:02:42, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Jul 06 2019 02:02:48
+
+Run file:	C:\Users\romam\Desktop\мое\прораммирование\game\game_demo_orig.exe
+Directory:	C:\Users\romam\Desktop\мое\прораммирование\game
+
+--------------------------------------------------
